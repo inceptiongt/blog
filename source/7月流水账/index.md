@@ -18,6 +18,7 @@ SPA应用后，用户操作页面后，因为URL不变，当前页面状态流�
 ***
 * 由于hash的存在，造成URL里带有#字符
 * hash部分不会传给后端
+
 ### browserHistory
 * html5中，对window.history新增了history.pushState/history.replaceState两个API，通过这两个API修改URL，但不会造成刷新页面
 * 调用上述API，增加的浏览记录，通过history.go()匹配中，不会造成页面刷新
