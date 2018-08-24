@@ -34,4 +34,23 @@
 <li>u 撤销 Ctrl+r 反撤销</li>
 <li>r/R 编辑当前位置/及右侧位置（进入replace模式）</li>
 </ul>
+<h1 id="前端调试"><a href="#前端调试" class="headerlink" title="前端调试"></a>前端调试</h1><h2 id="打印日志"><a href="#打印日志" class="headerlink" title="打印日志"></a>打印日志</h2><ul>
+<li>console.log()<h2 id="断点调试"><a href="#断点调试" class="headerlink" title="断点调试"></a>断点调试</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3></li>
+<li>打断点标记、显式debugger都是在源码上操作的。</li>
+<li>源码经过编译（babel）、合并（import）、压缩（uglify）发布到B端，B端如何还原源码。</li>
+<li>解决：<a href="https://segmentfault.com/a/1190000008315937" target="_blank" rel="noopener">sourceMap闪亮登场</a><h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3></li>
+</ul>
+<ol>
+<li>浏览器调试面板source选项卡<br>直接打断点</li>
+<li>VScode + Debugger for Chrome插件<br>VScode打断点标记；代码运行在Chrome上，能在断点处停住；<br>优点： 开发环境、方便打断点<br>原理<h3 id="调试面板功能介绍"><a href="#调试面板功能介绍" class="headerlink" title="调试面板功能介绍"></a>调试面板功能介绍</h3></li>
+</ol>
+<ul>
+<li>变量<blockquote>
+<p>Local<br>Closure<br>Global</p>
+</blockquote>
+</li>
+<li>调用堆栈</li>
+<li>监视</li>
+<li>断点</li>
+</ul>
 </div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2018/08/03/浏览器原理与性能/">浏览器原理与性能</a><a class="next" href="/2018/07/12/坑/">坑</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://inceptiongt.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/03/浏览器原理与性能/">浏览器原理与性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/26/技能修行/">技能修行</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/坑/">坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/21/6月流水账/">6月流水账</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/21/b/">b</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/21/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">睡前总结.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
