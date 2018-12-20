@@ -5,19 +5,19 @@
   
 
   
-  <title>坑 | 睡前总结</title>
+  <title>缓存 | 睡前总结</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="兼容 window.location.origin // IE11  其他 yarn安装package报错“unable to get local issuer certificate” // 公司网络问题 network报错Provisional headers are shown// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。之所以会出现这个警告，是因为去获取该资源">
+  <meta name="description" content="HTTP缓存Tips Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。 对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求">
 <meta property="og:type" content="article">
-<meta property="og:title" content="坑">
-<meta property="og:url" content="https://inceptiongt.github.io/2018/07/12/坑/index.html">
+<meta property="og:title" content="缓存">
+<meta property="og:url" content="https://inceptiongt.github.io/2018/12/20/缓存/index.html">
 <meta property="og:site_name" content="睡前总结">
-<meta property="og:description" content="兼容 window.location.origin // IE11  其他 yarn安装package报错“unable to get local issuer certificate” // 公司网络问题 network报错Provisional headers are shown// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。之所以会出现这个警告，是因为去获取该资源">
+<meta property="og:description" content="HTTP缓存Tips Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。 对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-10T03:46:53.487Z">
+<meta property="og:updated_time" content="2018-12-20T11:34:31.488Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="坑">
-<meta name="twitter:description" content="兼容 window.location.origin // IE11  其他 yarn安装package报错“unable to get local issuer certificate” // 公司网络问题 network报错Provisional headers are shown// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。之所以会出现这个警告，是因为去获取该资源">
+<meta name="twitter:title" content="缓存">
+<meta name="twitter:description" content="HTTP缓存Tips Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。 对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求">
   
     <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-坑" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-缓存" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/12/坑/" class="article-date">
-  <time datetime="2018-07-12T03:28:20.000Z" itemprop="datePublished">2018-07-12</time>
+    <a href="/2018/12/20/缓存/" class="article-date">
+  <time datetime="2018-12-20T07:36:01.000Z" itemprop="datePublished">2018-12-20</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      坑
+      缓存
     </h1>
   
 
@@ -86,20 +86,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h1><ul>
-<li>window.location.origin // IE11</li>
+        <h1 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h1><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
+<li>Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。</li>
+<li>对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求的Response Header字段，控制第二次请求的缓存效果</li>
+<li>200 from cache与304 有着本质区别<h2 id="浏览器的缓存有-2-种"><a href="#浏览器的缓存有-2-种" class="headerlink" title="浏览器的缓存有 2 种"></a>浏览器的缓存有 2 种</h2>一种叫非验证性缓存，或者有些人称为强缓存，用 Cache-Control 、 Expires 、 Pragma 来控制，优先级从高到低分别是 Pragma -&gt; Cache-Control -&gt; Expires，其特点是一但有效就在有效期内不会发任何请求到服务器<br>你看到的 200 from memory cache 就是非验证性缓存</li>
 </ul>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
-<li>yarn安装package报错“unable to get local issuer certificate” // 公司网络问题</li>
-<li>network报错Provisional headers are shown<br>// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。<br>之所以会出现这个警告，是因为去获取该资源的请求其实并（还）没有真的发生，所以 Header 里显示的是伪信息，直到服务器真的有响应返回，这里的 Header 信息才会被更新为真实的。不过这一切也可能不会发生，因为该请求可能会被屏蔽。比如说 AdBlock 什么的，当然了不全是浏览器扩展，具体情况具体分析了。</li>
-<li>对象通过a[key]方式取值时，变量key为字符串，注意字符串头尾是否含有空格。</li>
-<li>webpack.config.js &gt; alias设置的别名，在项目的其他js文件中import也能使用。</li>
+<p>另一种叫验证性缓存，用 ETag 、 Last-Modified 、 If-None-Match 、If-Modified-Since 来控制，其特点是会发一个请求给服务器来确认缓存是否有效，如果有效就返回 304 ，省去传输内容的时间</p>
+<p>从描述也能很容易看出来，非验证性缓存的优先级是高于验证性缓存的，因为有它在就根本不会发请求，自然也没有什么 If-None-Match 之类的东西出现的机会了</p>
+<h2 id="浏览器用户行为对缓存的影响"><a href="#浏览器用户行为对缓存的影响" class="headerlink" title="浏览器用户行为对缓存的影响"></a>浏览器用户行为对缓存的影响</h2><ul>
+<li>在URI输入栏中输入然后回车/通过书签访问：正常缓存判断</li>
+<li>F5/点击工具栏中的刷新按钮/右键菜单重新加载：强制不进行非验证缓存(仅index.html)</li>
+<li>Ctl+F5：强制不缓存<h2 id="避免304"><a href="#避免304" class="headerlink" title="避免304"></a>避免304</h2>可以通过标识文件版本名、加长缓存时间的方式来减少304响应。</li>
 </ul>
+<p>参考：<a href="http://imweb.io/topic/5795dcb6fb312541492eda8c" target="_blank" rel="noopener">HTTP缓存控制小结</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/07/12/坑/" data-id="cjpwj3q4w0004rgg5tczn1e2n" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/12/20/缓存/" data-id="cjpwj3q510007rgg5b5za7t5x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +112,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/07/26/技能修行/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          技能修行
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/03/7月流水账/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/11/12/react/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">7月流水账</div>
+      <div class="article-nav-title">react</div>
     </a>
   
 </nav>
