@@ -86,7 +86,7 @@
       
         <h1 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h1><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
 <li>Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。</li>
-<li>对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求的Response Header字段，控制第二次请求的缓存效果</li>
+<li>对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求的Response Header字段，控制第二次请求的缓存效果，所以js不能控制浏览器非验证性缓存。</li>
 <li>200 from cache与304 有着本质区别</li>
 </ul>
 <h2 id="浏览器的缓存有-2-种"><a href="#浏览器的缓存有-2-种" class="headerlink" title="浏览器的缓存有 2 种"></a>浏览器的缓存有 2 种</h2><p>一种叫非验证性缓存，或者有些人称为强缓存，用 Cache-Control 、 Expires 、 Pragma 来控制，优先级从高到低分别是 Pragma -&gt; Cache-Control -&gt; Expires，其特点是一但有效就在有效期内不会发任何请求到服务器<br>你看到的 200 from memory cache 就是非验证性缓存</p>
@@ -98,7 +98,19 @@
 <li>Ctl+F5：强制不缓存</li>
 </ul>
 <h2 id="避免304"><a href="#避免304" class="headerlink" title="避免304"></a>避免304</h2><p>可以通过标识文件版本名、加长缓存时间的方式来减少304响应。</p>
-<p>参考：<a href="http://imweb.io/topic/5795dcb6fb312541492eda8c" target="_blank" rel="noopener">HTTP缓存控制小结</a></p>
+<h2 id="不能缓存的请求："><a href="#不能缓存的请求：" class="headerlink" title="不能缓存的请求："></a>不能缓存的请求：</h2><ul>
+<li><p>HTTP 信息头中包含Cache-Control:no-cache，pragma:no-cache，或Cache-Control:max-age=0 等告诉浏览器不用缓存的请求</p>
+</li>
+<li><p>需要根据Cookie，认证信息等决定输入内容的动态请求是不能被缓存的</p>
+</li>
+<li><p>经过HTTPS安全加密的请求（有人也经过测试发现，ie 其实在头部加入 Cache-Control：max-age 信息，firefox 在头部加入 Cache-Control:Public 之后，能够对HTTPS的资源进行缓存）</p>
+</li>
+<li><p>HTTP 响应头中不包含 Last-Modified/Etag，也不包含 Cache-Control/Expires 的请求无法被缓存</p>
+</li>
+<li><p>目前浏览器的实现是不会对POST请求的响应做缓存的（从语义上来说也不应该），并且规范中也规定了返回状态码不允许是304。不过这并不表示POST的响应不能被缓存，根据RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content中描述的，如果在POST请求对应的响应中包含Freshness相关信息的话，这次响应也是可以被缓存，具体可以参考上面的那个链接。</p>
+</li>
+</ul>
+<p>参考：<br><a href="http://imweb.io/topic/5795dcb6fb312541492eda8c" target="_blank" rel="noopener">HTTP缓存控制小结</a><br><a href="https://juejin.im/entry/5993dabd518825244630ea2a" target="_blank" rel="noopener">http协议缓存机制</a></p>
 
       
     </div>
