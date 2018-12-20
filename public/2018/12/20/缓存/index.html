@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="睡前总结">
 <meta property="og:description" content="HTTP缓存Tips Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。 对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T11:34:31.488Z">
+<meta property="og:updated_time" content="2018-12-20T11:36:49.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="缓存">
 <meta name="twitter:description" content="HTTP缓存Tips Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。 对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求">
@@ -89,15 +89,17 @@
         <h1 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h1><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
 <li>Response Header里字段(Cache-Control 、 Expires 、 Pragma、ETag 、 Last-Modified)是给浏览器用的，Request Header里的字段(Cache-Control、If-None-Match 、If-Modified-Since)是给服务端用的。</li>
 <li>对同一资源第二次的请求，才涉及到缓存。浏览器根据第一次请求的Response Header字段，控制第二次请求的缓存效果</li>
-<li>200 from cache与304 有着本质区别<h2 id="浏览器的缓存有-2-种"><a href="#浏览器的缓存有-2-种" class="headerlink" title="浏览器的缓存有 2 种"></a>浏览器的缓存有 2 种</h2>一种叫非验证性缓存，或者有些人称为强缓存，用 Cache-Control 、 Expires 、 Pragma 来控制，优先级从高到低分别是 Pragma -&gt; Cache-Control -&gt; Expires，其特点是一但有效就在有效期内不会发任何请求到服务器<br>你看到的 200 from memory cache 就是非验证性缓存</li>
+<li>200 from cache与304 有着本质区别</li>
 </ul>
+<h2 id="浏览器的缓存有-2-种"><a href="#浏览器的缓存有-2-种" class="headerlink" title="浏览器的缓存有 2 种"></a>浏览器的缓存有 2 种</h2><p>一种叫非验证性缓存，或者有些人称为强缓存，用 Cache-Control 、 Expires 、 Pragma 来控制，优先级从高到低分别是 Pragma -&gt; Cache-Control -&gt; Expires，其特点是一但有效就在有效期内不会发任何请求到服务器<br>你看到的 200 from memory cache 就是非验证性缓存</p>
 <p>另一种叫验证性缓存，用 ETag 、 Last-Modified 、 If-None-Match 、If-Modified-Since 来控制，其特点是会发一个请求给服务器来确认缓存是否有效，如果有效就返回 304 ，省去传输内容的时间</p>
 <p>从描述也能很容易看出来，非验证性缓存的优先级是高于验证性缓存的，因为有它在就根本不会发请求，自然也没有什么 If-None-Match 之类的东西出现的机会了</p>
 <h2 id="浏览器用户行为对缓存的影响"><a href="#浏览器用户行为对缓存的影响" class="headerlink" title="浏览器用户行为对缓存的影响"></a>浏览器用户行为对缓存的影响</h2><ul>
 <li>在URI输入栏中输入然后回车/通过书签访问：正常缓存判断</li>
 <li>F5/点击工具栏中的刷新按钮/右键菜单重新加载：强制不进行非验证缓存(仅index.html)</li>
-<li>Ctl+F5：强制不缓存<h2 id="避免304"><a href="#避免304" class="headerlink" title="避免304"></a>避免304</h2>可以通过标识文件版本名、加长缓存时间的方式来减少304响应。</li>
+<li>Ctl+F5：强制不缓存</li>
 </ul>
+<h2 id="避免304"><a href="#避免304" class="headerlink" title="避免304"></a>避免304</h2><p>可以通过标识文件版本名、加长缓存时间的方式来减少304响应。</p>
 <p>参考：<a href="http://imweb.io/topic/5795dcb6fb312541492eda8c" target="_blank" rel="noopener">HTTP缓存控制小结</a></p>
 
       
