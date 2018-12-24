@@ -7,9 +7,11 @@ tags:
 * 创建多个bundle的方式：多个入口起点(entry point)、代码拆分(code splitting)或各种插件
 (plugin)；
 * 处理js过程：打包、splitting、注入HTML模板（因为文件名包含hash，需动态插入。async模块不需要）
+
 # Code Splitting目的
 * 最基本的任务是分离出第三方依赖库——因为第三方库的内容可能很久都不会变动，所以用来标记变化的摘要哈希Hash也很久不变，这也就意味着我们可以利用本地缓存来避免没有必要的重复打包，并利用浏览器缓存避免冗余的客户端加载。
 * 提取公共模块，减小文件体积或减少HTTP请求
+
 # create-react-app
 /config/webpack.config.prod.js
 ```javascript
