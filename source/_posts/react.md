@@ -4,8 +4,9 @@ date: 2018-11-12 12:06:52
 tags:
 ---
 
-# react
-* 更新界面的两个办法:1、创建一个新的元素，然后将它传入 ReactDOM.render() 方法; 2、this.setState()
+# TIPS
+* 可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变
+
 ## 组件与Props
 * 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。
 * 所有的React组件必须像纯函数那样使用它们的props。
@@ -14,6 +15,8 @@ tags:
 * [React 理念](https://react.docschina.org/docs/thinking-in-react.html)1、按UI划分出组件层级；2、用React创建一个静态版本；3、确定哪些数据是state；4、确定你的State应该位于哪里。。。。。。
 
 ## 性能优化
+### 生命周期
+![生命周期图解](https://upload-images.jianshu.io/upload_images/4118241-d979d05af0b7d4db.png)  
 ### 避免重复渲染与shouldComponentUpdate应用
 * React组件更新DOM（调用浏览器DOMapi）决策  
 组件生命周期shouldComponentUpdate(preProps, preState)，默认返回 true，即始终会执行 render() 方法，然后做 Virtual DOM 比较，并得出是否需要做真实 DOM 更新；先看SCU，再看vDOMEq：

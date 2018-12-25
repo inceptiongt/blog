@@ -7,19 +7,20 @@
   
   <title>react | 睡前总结</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="react 更新界面的两个办法:1、创建一个新的元素，然后将它传入 ReactDOM.render() 方法; 2、this.setState()组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state和props之">
+  <meta name="description" content="TIPS 可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变  组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state和props之间最重要的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react">
 <meta property="og:url" content="https://inceptiongt.github.io/2018/11/12/react/index.html">
 <meta property="og:site_name" content="睡前总结">
-<meta property="og:description" content="react 更新界面的两个办法:1、创建一个新的元素，然后将它传入 ReactDOM.render() 方法; 2、this.setState()组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state和props之">
+<meta property="og:description" content="TIPS 可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变  组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state和props之间最重要的">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4118241-d979d05af0b7d4db.png">
 <meta property="og:image" content="https://react.docschina.org/static/should-component-update-5ee1bdf4779af06072a17b7a0654f6db-9a3ff.png">
-<meta property="og:updated_time" content="2018-11-13T09:21:56.821Z">
+<meta property="og:updated_time" content="2018-12-25T07:55:41.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react">
-<meta name="twitter:description" content="react 更新界面的两个办法:1、创建一个新的元素，然后将它传入 ReactDOM.render() 方法; 2、this.setState()组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state和props之">
-<meta name="twitter:image" content="https://react.docschina.org/static/should-component-update-5ee1bdf4779af06072a17b7a0654f6db-9a3ff.png">
+<meta name="twitter:description" content="TIPS 可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变  组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state和props之间最重要的">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4118241-d979d05af0b7d4db.png">
   
     <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
   
@@ -88,15 +89,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="react"><a href="#react" class="headerlink" title="react"></a>react</h1><ul>
-<li>更新界面的两个办法:1、创建一个新的元素，然后将它传入 ReactDOM.render() 方法; 2、this.setState()<h2 id="组件与Props"><a href="#组件与Props" class="headerlink" title="组件与Props"></a>组件与Props</h2></li>
+        <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><ul>
+<li>可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变</li>
+</ul>
+<h2 id="组件与Props"><a href="#组件与Props" class="headerlink" title="组件与Props"></a>组件与Props</h2><ul>
 <li>组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。</li>
 <li>所有的React组件必须像纯函数那样使用它们的props。</li>
 <li>props与state: state和props之间最重要的区别是props是从父组件传递的，而state是由组件本身管理的。组件不能改变其props，但可以改变state。 通过使用this.setState()。 只有定义为类的组件才可以具有状态。</li>
 <li>受控 &amp; 非受控组件</li>
 <li><a href="https://react.docschina.org/docs/thinking-in-react.html" target="_blank" rel="noopener">React 理念</a>1、按UI划分出组件层级；2、用React创建一个静态版本；3、确定哪些数据是state；4、确定你的State应该位于哪里。。。。。。</li>
 </ul>
-<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="避免重复渲染与shouldComponentUpdate应用"><a href="#避免重复渲染与shouldComponentUpdate应用" class="headerlink" title="避免重复渲染与shouldComponentUpdate应用"></a>避免重复渲染与shouldComponentUpdate应用</h3><ul>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p><img src="https://upload-images.jianshu.io/upload_images/4118241-d979d05af0b7d4db.png" alt="生命周期图解">  </p>
+<h3 id="避免重复渲染与shouldComponentUpdate应用"><a href="#避免重复渲染与shouldComponentUpdate应用" class="headerlink" title="避免重复渲染与shouldComponentUpdate应用"></a>避免重复渲染与shouldComponentUpdate应用</h3><ul>
 <li>React组件更新DOM（调用浏览器DOMapi）决策<br>组件生命周期shouldComponentUpdate(preProps, preState)，默认返回 true，即始终会执行 render() 方法，然后做 Virtual DOM 比较，并得出是否需要做真实 DOM 更新；先看SCU，再看vDOMEq：<br><img src="https://react.docschina.org/static/should-component-update-5ee1bdf4779af06072a17b7a0654f6db-9a3ff.png" alt="渲染"><br>对其中每个组件来说，SCU表明了shouldComponentUpdate的返回内容，vDOMEq表明了待渲染的React元素与原始元素是否相等，最后，圆圈的颜色表明这个组件是否需要重新渲染。（绿色true，红色flase）</li>
 <li>当一个组件的props或者state改变时，React通过比较新返回的元素（render()返回）和之前渲染的元素来决定是否有必要更新实际的DOM。当他们不相等时，React会更新DOM。</li>
 <li>性能优化思路：如果你知道在某些情况下你的组件不需要更新，你可以在shouldComponentUpdate内返回false来跳过整个渲染进程，该进程包括了对该组件和之后的内容调用render()指令及Virtual DOM比较。</li>
