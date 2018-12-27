@@ -31,3 +31,87 @@ tags:
 * 约束两点，提高算法效率到O(n)
 两个不同类型的元素将产生不同的树。
 通过渲染器附带key属性，开发者可以示意哪些子元素可能是稳定的。（key必须在其兄弟节点中是唯一的，而非全局唯一）
+
+# 高级指引
+## 深入 JSX
+### 指定 React 元素类型
+### React 必须声明
+### 点表示法
+### 首字母大写
+### 在运行时选择类型
+### 属性
+### 使用 JavaScript 表达式
+### 字符串常量
+### 默认为 True
+### 扩展属性
+### 子代
+### 字符串常量
+### JSX
+### JavaScript 表达式
+### 函数
+### 布尔值、Null 和 Undefined 被忽略
+
+## 使用 PropTypes 检查类型
+### PropTypes
+### 限制单个子代
+### 属性默认值
+
+## 静态类型检查
+### Flow
+### 在一个项目中添加 Flow
+### 从编译过的代码中剥离 Flow 语法
+### 运行 Flow
+### 添加 Flow 类型注释
+### TypeScript
+### 在一个项目中添加 TypeScript
+### 配置 TypeScript 编译器
+### 文件扩展名
+### 运行 TypeScript
+### 类型定义
+### 和 Create React App 一起使用 TypeScript
+### Reason
+### Kotlin
+### 其他语言
+
+## Refs & DOM
+### Refs 提供了一种方式，用于访问在 render 方法中创建的 DOM 节点或 React 元素。
+### 何时使用 Refs
+### 不要过度使用 Refs
+### Note
+### 创建 Refs
+### 访问 Refs
+### 对父组件暴露 DOM 节点
+### 回调 Refs
+### 旧版 API：String 类型的 Refs
+### 注意
+
+## 非受控组件
+## 性能优化
+## 不使用 ES6
+## 不使用 JSX
+## Reconciliation
+## Context
+## Fragments
+## Portals
+## Error Boundaries
+## Web Components
+## 高阶组件
+## 传递 Refs
+## Render Props
+## 与第三方库协同
+## 可访问性
+## Code-Splitting
+## 严格模式
+
+# API参考
+## React
+## React.Component
+## ReactDOM
+## ReactDOMServer
+## DOM 元素
+## 合成事件
+## Test Utilities
+## 浅层渲染
+## Test Renderer
+## JavaScript 环境要求
+## 术语表
