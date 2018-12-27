@@ -47,6 +47,7 @@ OO### React 必须声明
 ### 字符串常量
 ### 默认为 True
 ### 扩展属性
+---
 ## 子代
 props.children
 ### 字符串常量
@@ -77,7 +78,7 @@ Render Props的一种情况，使用children属性[参考](#使用-Props-而非-
 ## Reason
 ## Kotlin
 ## 其他语言
-
+---
 # Refs & DOM
 ## Refs 提供了一种方式，用于访问在 render 方法中创建的 DOM 节点或 React 元素。
 ## 何时使用 Refs
