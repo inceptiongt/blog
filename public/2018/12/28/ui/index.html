@@ -5,19 +5,19 @@
   
 
   
-  <title>坑 | 睡前总结</title>
+  <title>ui | 睡前总结</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="兼容 window.location.origin // IE11  其他 yarn安装package报错“unable to get local issuer certificate” // 公司网络问题 network报错Provisional headers are shown// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。之所以会出现这个警告，是因为去获取该资源">
+  <meta name="description" content="SVGIconfontunicode与font-class引用使用的是使用系统字体渲染引擎，其实就是文字。通过@font-face引入icon字体，再通过类名.iconfont设置元素的font-family属性值为icon字体。font-class方式是unicode使用方式的一种变种，这种方式只是在原来的dom上增加一个伪元素。 symbol引用使用SVG渲染技术通过引入js，利用生成svg图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="坑">
-<meta property="og:url" content="https://inceptiongt.github.io/2018/07/12/坑/index.html">
+<meta property="og:title" content="ui">
+<meta property="og:url" content="https://inceptiongt.github.io/2018/12/28/ui/index.html">
 <meta property="og:site_name" content="睡前总结">
-<meta property="og:description" content="兼容 window.location.origin // IE11  其他 yarn安装package报错“unable to get local issuer certificate” // 公司网络问题 network报错Provisional headers are shown// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。之所以会出现这个警告，是因为去获取该资源">
+<meta property="og:description" content="SVGIconfontunicode与font-class引用使用的是使用系统字体渲染引擎，其实就是文字。通过@font-face引入icon字体，再通过类名.iconfont设置元素的font-family属性值为icon字体。font-class方式是unicode使用方式的一种变种，这种方式只是在原来的dom上增加一个伪元素。 symbol引用使用SVG渲染技术通过引入js，利用生成svg图">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-10T03:46:53.487Z">
+<meta property="og:updated_time" content="2018-12-28T09:18:49.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="坑">
-<meta name="twitter:description" content="兼容 window.location.origin // IE11  其他 yarn安装package报错“unable to get local issuer certificate” // 公司网络问题 network报错Provisional headers are shown// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。之所以会出现这个警告，是因为去获取该资源">
+<meta name="twitter:title" content="ui">
+<meta name="twitter:description" content="SVGIconfontunicode与font-class引用使用的是使用系统字体渲染引擎，其实就是文字。通过@font-face引入icon字体，再通过类名.iconfont设置元素的font-family属性值为icon字体。font-class方式是unicode使用方式的一种变种，这种方式只是在原来的dom上增加一个伪元素。 symbol引用使用SVG渲染技术通过引入js，利用生成svg图">
   
     <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-坑" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-ui" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/12/坑/" class="article-date">
-  <time datetime="2018-07-12T03:28:20.000Z" itemprop="datePublished">2018-07-12</time>
+    <a href="/2018/12/28/ui/" class="article-date">
+  <time datetime="2018-12-28T07:38:40.000Z" itemprop="datePublished">2018-12-28</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      坑
+      ui
     </h1>
   
 
@@ -86,20 +86,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h1><ul>
-<li>window.location.origin // IE11</li>
+        <h1 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h1><h1 id="Iconfont"><a href="#Iconfont" class="headerlink" title="Iconfont"></a>Iconfont</h1><h2 id="unicode与font-class引用"><a href="#unicode与font-class引用" class="headerlink" title="unicode与font-class引用"></a>unicode与font-class引用</h2><p>使用的是使用系统字体渲染引擎，其实就是文字。<br>通过@font-face引入icon字体，再通过类名.iconfont设置元素的font-family属性值为icon字体。<br>font-class方式是unicode使用方式的一种变种，这种方式只是在原来的dom上增加一个伪元素。</p>
+<h2 id="symbol引用"><a href="#symbol引用" class="headerlink" title="symbol引用"></a>symbol引用</h2><p>使用SVG渲染技术<br>通过引入js，利用<symbol>生成svg图标集合，再通过<use>显示某一图标   </use></symbol></p>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>兼容性<br>单色/多色<br>通过font-size,color来调整样式  </p>
+<ul>
+<li>可能有些童鞋又疑惑了，svg的大小不是不支持font-size修改的吗？如何实现的呢？其实这里用了一个比较hack的方式，就是把图标元素的宽高都写为1em，而em的大小是相对于该元素的字体大小的，这样就实现了svg宽高跟着svg的字体大小一起变了。多色不支持color属性。</li>
 </ul>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
-<li>yarn安装package报错“unable to get local issuer certificate” // 公司网络问题</li>
-<li>network报错Provisional headers are shown<br>// 这个警告的意思是说：请求的资源可能会被（扩展／或其他什么机制）屏蔽掉。<br>之所以会出现这个警告，是因为去获取该资源的请求其实并（还）没有真的发生，所以 Header 里显示的是伪信息，直到服务器真的有响应返回，这里的 Header 信息才会被更新为真实的。不过这一切也可能不会发生，因为该请求可能会被屏蔽。比如说 AdBlock 什么的，当然了不全是浏览器扩展，具体情况具体分析了。</li>
-<li>对象通过a[key]方式取值时，变量key为字符串，注意字符串头尾是否含有空格。</li>
-<li>webpack.config.js &gt; alias设置的别名，在项目的其他js文件中import也能使用。</li>
-</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://my.oschina.net/codingDog/blog/1618232" target="_blank" rel="noopener">iconfont的实现原理及如何使用?</a><br><a href="https://www.w3cplus.com/svg/how-to-create-an-icon-system-using-svg-symbols.html" target="_blank" rel="noopener">使用SVG symbols建立图标系统</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/07/12/坑/" data-id="cjq7v0xyx00045pg5g58fxqvu" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/12/28/ui/" data-id="cjq7v0xyz00055pg52h8z3649" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +106,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/07/26/技能修行/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          技能修行
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/03/7月流水账/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/12/24/wepback/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">7月流水账</div>
+      <div class="article-nav-title">wepback</div>
     </a>
   
 </nav>

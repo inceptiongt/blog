@@ -62,6 +62,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ui" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/28/ui/" class="article-date">
+  <time datetime="2018-12-28T07:38:40.000Z" itemprop="datePublished">2018-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/28/ui/">ui</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h1><h1 id="Iconfont"><a href="#Iconfont" class="headerlink" title="Iconfont"></a>Iconfont</h1><h2 id="unicode与font-class引用"><a href="#unicode与font-class引用" class="headerlink" title="unicode与font-class引用"></a>unicode与font-class引用</h2><p>使用的是使用系统字体渲染引擎，其实就是文字。<br>通过@font-face引入icon字体，再通过类名.iconfont设置元素的font-family属性值为icon字体。<br>font-class方式是unicode使用方式的一种变种，这种方式只是在原来的dom上增加一个伪元素。</p>
+<h2 id="symbol引用"><a href="#symbol引用" class="headerlink" title="symbol引用"></a>symbol引用</h2><p>使用SVG渲染技术<br>通过引入js，利用<symbol>生成svg图标集合，再通过<use>显示某一图标   </use></symbol></p>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>兼容性<br>单色/多色<br>通过font-size,color来调整样式  </p>
+<ul>
+<li>可能有些童鞋又疑惑了，svg的大小不是不支持font-size修改的吗？如何实现的呢？其实这里用了一个比较hack的方式，就是把图标元素的宽高都写为1em，而em的大小是相对于该元素的字体大小的，这样就实现了svg宽高跟着svg的字体大小一起变了。多色不支持color属性。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://my.oschina.net/codingDog/blog/1618232" target="_blank" rel="noopener">iconfont的实现原理及如何使用?</a><br><a href="https://www.w3cplus.com/svg/how-to-create-an-icon-system-using-svg-symbols.html" target="_blank" rel="noopener">使用SVG symbols建立图标系统</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://inceptiongt.github.io/2018/12/28/ui/" data-id="cjq7v0xyz00055pg52h8z3649" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-wepback" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/24/wepback/" class="article-date">
@@ -97,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/12/24/wepback/" data-id="cjq24zq0a0009ieg58s6207hu" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/12/24/wepback/" data-id="cjq7v0xzw000a5pg5v3f9q9md" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/12/20/缓存/" data-id="cjq24zpzk0007ieg53vfjynfa" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/12/20/缓存/" data-id="cjq7v0xz400085pg542ciwaod" class="article-share-link">Share</a>
       
       
     </footer>
@@ -234,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/11/12/react/" data-id="cjq24zpzb0003ieg5ebfxl6hl" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/11/12/react/" data-id="cjq7v0xyv00035pg5b5xsav92" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/10/10/待归档/" data-id="cjq24zpzf0005ieg5fk15gweo" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/10/10/待归档/" data-id="cjq7v0xz100065pg57p8mfz7z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -319,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/09/21/JS运行时及闭包/" data-id="cjq24zpz80002ieg5z1ks9wx0" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/09/21/JS运行时及闭包/" data-id="cjq7v0xyp00015pg5rf3113re" class="article-share-link">Share</a>
       
       
     </footer>
@@ -493,7 +536,7 @@ loadEventEnd: 1441112693215
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/08/03/浏览器原理与性能/" data-id="cjq24zpzy0008ieg5o8tnhoj3" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/08/03/浏览器原理与性能/" data-id="cjq7v0xzl00095pg553gyuary" class="article-share-link">Share</a>
       
       
     </footer>
@@ -584,7 +627,7 @@ loadEventEnd: 1441112693215
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/07/26/技能修行/" data-id="cjq24zpzi0006ieg59w5zt5ql" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/07/26/技能修行/" data-id="cjq7v0xz200075pg54oguc85q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -629,7 +672,7 @@ loadEventEnd: 1441112693215
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/07/12/坑/" data-id="cjq24zpzd0004ieg5vuqjc8cz" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/07/12/坑/" data-id="cjq7v0xyx00045pg5g58fxqvu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -687,116 +730,7 @@ loadEventEnd: 1441112693215
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/07/03/7月流水账/" data-id="cjq24zpz30001ieg5cngyblwi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-6月流水账" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/21/6月流水账/" class="article-date">
-  <time datetime="2018-06-21T06:23:47.000Z" itemprop="datePublished">2018-06-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/21/6月流水账/">6月流水账</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="21号"><a href="#21号" class="headerlink" title="21号"></a>21号</h1><h2 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h2><ul>
-<li>搭建hexo博客系统</li>
-<li>。。</li>
-<li>。。</li>
-</ul>
-<h2 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h2><ul>
-<li>第一种部署方案已经实现</li>
-<li>。。</li>
-<li>。。</li>
-<li>。。</li>
-</ul>
-<h2 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h2><ul>
-<li></li>
-<li>。。</li>
-</ul>
-<h2 id="hexo部署的两种方案"><a href="#hexo部署的两种方案" class="headerlink" title="hexo部署的两种方案"></a>hexo部署的两种方案</h2><blockquote>
-<ul>
-<li>hexo generate产生静态文件，利用GitHub Page部署静态网站。</li>
-<li>涉及gitHub.blog（开发）/gitHub.inceptiongt.github.io（部署）两个代码库。</li>
-<li>本地开发完后通过shell完成hexo generate、复制publish文件夹、push到部署代码库</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>hexo generate生成静态文件，利用http-sever提供web服务，在自己服务器上。</li>
-<li>涉及gitHub.blog代码库</li>
-<li>本地开发后，hexo generate再git提交，GitHub.blog设置webhook，自己服务器通过git拉取代码，public文件夹被web服务</li>
-</ul>
-</blockquote>
-<h1 id="22号"><a href="#22号" class="headerlink" title="22号"></a>22号</h1><h2 id="上午-1"><a href="#上午-1" class="headerlink" title="上午"></a>上午</h2><ul>
-<li>pm2部署http-server服务</li>
-<li>。。。</li>
-<li>。。。</li>
-</ul>
-<h2 id="下午-1"><a href="#下午-1" class="headerlink" title="下午"></a>下午</h2><ul>
-<li>github代码库webhooks配置</li>
-<li>web服务器端webhooks搭建</li>
-<li>。。。</li>
-</ul>
-<h2 id="晚上-1"><a href="#晚上-1" class="headerlink" title="晚上"></a>晚上</h2><ul>
-<li>溜了</li>
-</ul>
-<h2 id="Linux环境变量"><a href="#Linux环境变量" class="headerlink" title="Linux环境变量"></a>Linux环境变量</h2><ul>
-<li>把相应的可执行文件路径（bin文件夹）告诉系统，方便调用。</li>
-<li>echo $PATH查看环境变量；find –name http-server查看该命令的环境路径。</li>
-</ul>
-<h2 id="pm2启动npm包，pm2-start-npm-–-run-lt-script"><a href="#pm2启动npm包，pm2-start-npm-–-run-lt-script" class="headerlink" title="pm2启动npm包，pm2 start npm – run \&lt;script>"></a>pm2启动npm包，pm2 start npm – run \&lt;script></h2><h1 id="24号"><a href="#24号" class="headerlink" title="24号"></a>24号</h1><ul>
-<li>content/type</li>
-<li>json与object</li>
-<li>git操作</li>
-</ul>
-<h1 id="25号"><a href="#25号" class="headerlink" title="25号"></a>25号</h1><h2 id="content-type"><a href="#content-type" class="headerlink" title="content/type"></a>content/type</h2><p>application/json与application/x-www-form-urlencoded</p>
-<pre><code>var express = require(&apos;express&apos;)
-
-var bodyParser = require(&apos;body-parser&apos;)
-
-var app = express()
-
-// create application/json parser
-var jsonParser = bodyParser.json()
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
-</code></pre><p>req.boy就能取到值了</p>
-<h2 id="json（对象）、object字面量表示法、json字符串"><a href="#json（对象）、object字面量表示法、json字符串" class="headerlink" title="json（对象）、object字面量表示法、json字符串"></a>json（对象）、object字面量表示法、json字符串</h2><p>JSON 只允许”property”: value属性名必须用双引号括起来。</p>
-<hr>
-<ul>
-<li>JSON 只允许”property”: value syntax形式的属性定义。属性名必须用双引号括起来。且属性定义不允许使用简便写法。</li>
-<li>JSON中，属性的值仅允许字符串，数字，数组，true，false，null或其他（JSON）对象。 </li>
-<li>JSON中，不允许将值设置为函数。</li>
-<li>Date 等对象，经JSON.parse()处理后，会变成字符串。</li>
-<li>JSON.parse() 不会处理计算的属性名，会当做错误抛出。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/06/21/6月流水账/" data-id="cjq24zpyt0000ieg578tc8lxj" class="article-share-link">Share</a>
+      <a data-url="https://inceptiongt.github.io/2018/07/03/7月流水账/" data-id="cjq7v0xys00025pg5jpj9cgej" class="article-share-link">Share</a>
       
       
     </footer>
@@ -807,6 +741,11 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -837,6 +776,10 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
       <ul>
         
           <li>
+            <a href="/2018/12/28/ui/">ui</a>
+          </li>
+        
+          <li>
             <a href="/2018/12/24/wepback/">wepback</a>
           </li>
         
@@ -850,10 +793,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
         
           <li>
             <a href="/2018/10/10/待归档/">待归档</a>
-          </li>
-        
-          <li>
-            <a href="/2018/09/21/JS运行时及闭包/">JS运行时及闭包</a>
           </li>
         
       </ul>
