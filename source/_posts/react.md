@@ -2,6 +2,7 @@
 title: react
 date: 2018-11-12 12:06:52
 tags: JS
+categories: JS
 ---
 
 # TIPS

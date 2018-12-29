@@ -1,7 +1,8 @@
 ---
 title: Iconfont
 date: 2018-12-28 15:38:40
-tags: ui
+tags: UI
+categories: UI
 ---
 # SVG
 # Iconfont
