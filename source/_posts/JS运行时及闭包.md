@@ -1,7 +1,7 @@
 ---
 title: JS运行时及闭包 
 date: 2018-09-21 15:49:44
-tags:
+tags: JS
 ---
 # 一些结论 
 ## 执行堆栈，堆的是执行上下文（execution content）

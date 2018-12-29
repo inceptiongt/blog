@@ -1,7 +1,7 @@
 ---
 title: wepback
 date: 2018-12-24 09:32:01
-tags:
+tags: JS
 ---
 # TIPS
 * 创建多个bundle的方式：多个入口起点(entry point)、代码拆分(code splitting)或各种插件
