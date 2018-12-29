@@ -1,95 +1,83 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="">
   
+  <title>react</title>
+  <meta name="author" content="GT">
+  <meta name="description" content="TIPS
+可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变；3、暴露ref被操作；
 
+组件与Props
+组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素">
   
-  <title>react | 睡前总结</title>
+  
+  <meta property="og:title" content="react">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="TIPS 可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变；3、暴露ref被操作；  组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state">
-<meta property="og:type" content="article">
-<meta property="og:title" content="react">
-<meta property="og:url" content="https://inceptiongt.github.io/2018/11/12/react/index.html">
-<meta property="og:site_name" content="睡前总结">
-<meta property="og:description" content="TIPS 可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变；3、暴露ref被操作；  组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state">
-<meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4118241-d979d05af0b7d4db.png">
-<meta property="og:image" content="https://react.docschina.org/static/should-component-update-5ee1bdf4779af06072a17b7a0654f6db-9a3ff.png">
-<meta property="og:updated_time" content="2018-12-27T12:43:02.118Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react">
-<meta name="twitter:description" content="TIPS 可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变；3、暴露ref被操作；  组件与Props 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。 所有的React组件必须像纯函数那样使用它们的props。 props与state: state">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4118241-d979d05af0b7d4db.png">
-  
-    <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  <meta property="og:site_name" content="睡前总结">
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 </html>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">睡前总结</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://inceptiongt.github.io"></form>
+  <a id="top"></a>
+  <div id="main">
+    <div class="behind">
+      <a href="/" class="back black-color">
+        <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+        </svg>
+      </a>
+      <div class="description">
+        &nbsp;GTT
       </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-react" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/12/react/" class="article-date">
-  <time datetime="2018-11-12T04:06:52.000Z" itemprop="datePublished">2018-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+    <div class="main-ctnr">
+      
+
+  <article class="standard post">
+    <div class="title">
+      
   
-    <h1 class="article-title" itemprop="name">
-      react
+    <h1 class="page-title center">
+        react
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+
+    </div>
+    <div class="meta center">
       
-        <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><ul>
+<time datetime="2018-11-12T04:06:52.000Z">
+<svg class="i-calendar" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"/>
+  </svg>
+  &nbsp;
+  2018-11-12
+</time>
+
+
+
+
+
+
+
+    </div>
+    <hr>
+    
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TIPS"><span class="toc-text">TIPS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件与Props"><span class="toc-text">组件与Props</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#性能优化"><span class="toc-text">性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#生命周期"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免重复渲染与shouldComponentUpdate应用"><span class="toc-text">避免重复渲染与shouldComponentUpdate应用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#协调（Reconciliation）"><span class="toc-text">协调（Reconciliation）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#高级指引"><span class="toc-text">高级指引</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#深入-JSX"><span class="toc-text">深入 JSX</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#指定-React-元素类型"><span class="toc-text">指定 React 元素类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#点表示法"><span class="toc-text">点表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#首字母大写"><span class="toc-text">首字母大写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在运行时选择类型"><span class="toc-text">在运行时选择类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性"><span class="toc-text">属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-JavaScript-表达式"><span class="toc-text">使用 JavaScript 表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串常量"><span class="toc-text">字符串常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认为-True"><span class="toc-text">默认为 True</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扩展属性"><span class="toc-text">扩展属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子代"><span class="toc-text">子代</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串常量-1"><span class="toc-text">字符串常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSX"><span class="toc-text">JSX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-表达式"><span class="toc-text">JavaScript 表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔值、Null-和-Undefined-被忽略"><span class="toc-text">布尔值、Null 和 Undefined 被忽略</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-PropTypes-检查类型"><span class="toc-text">使用 PropTypes 检查类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PropTypes"><span class="toc-text">PropTypes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#限制单个子代"><span class="toc-text">限制单个子代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性默认值"><span class="toc-text">属性默认值</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#静态类型检查"><span class="toc-text">静态类型检查</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Flow"><span class="toc-text">Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在一个项目中添加-Flow"><span class="toc-text">在一个项目中添加 Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从编译过的代码中剥离-Flow-语法"><span class="toc-text">从编译过的代码中剥离 Flow 语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行-Flow"><span class="toc-text">运行 Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-Flow-类型注释"><span class="toc-text">添加 Flow 类型注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TypeScript"><span class="toc-text">TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在一个项目中添加-TypeScript"><span class="toc-text">在一个项目中添加 TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-TypeScript-编译器"><span class="toc-text">配置 TypeScript 编译器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件扩展名"><span class="toc-text">文件扩展名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行-TypeScript"><span class="toc-text">运行 TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型定义"><span class="toc-text">类型定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#和-Create-React-App-一起使用-TypeScript"><span class="toc-text">和 Create React App 一起使用 TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reason"><span class="toc-text">Reason</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kotlin"><span class="toc-text">Kotlin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他语言"><span class="toc-text">其他语言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Refs-amp-DOM"><span class="toc-text">Refs &amp; DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Refs-提供了一种方式，用于访问在-render-方法中创建的-DOM-节点或-React-元素。"><span class="toc-text">Refs 提供了一种方式，用于访问在 render 方法中创建的 DOM 节点或 React 元素。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#何时使用-Refs"><span class="toc-text">何时使用 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不要过度使用-Refs"><span class="toc-text">不要过度使用 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Note"><span class="toc-text">Note</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建-Refs"><span class="toc-text">创建 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问-Refs"><span class="toc-text">访问 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为-DOM-元素添加-Ref"><span class="toc-text">为 DOM 元素添加 Ref</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为类组件添加-Ref"><span class="toc-text">为类组件添加 Ref</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Refs-与函数式组件"><span class="toc-text">Refs 与函数式组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对父组件暴露-DOM-节点"><span class="toc-text">对父组件暴露 DOM 节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回调-Refs"><span class="toc-text">回调 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#旧版-API：String-类型的-Refs"><span class="toc-text">旧版 API：String 类型的 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#非受控组件"><span class="toc-text">非受控组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#性能优化-1"><span class="toc-text">性能优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#不使用-ES6"><span class="toc-text">不使用 ES6</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#不使用-JSX"><span class="toc-text">不使用 JSX</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reconciliation"><span class="toc-text">Reconciliation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Context"><span class="toc-text">Context</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Context-通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递-props-属性。"><span class="toc-text">Context 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递 props 属性。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#何时使用-Context"><span class="toc-text">何时使用 Context</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-text">API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-createContext"><span class="toc-text">React.createContext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Provider"><span class="toc-text">Provider</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Consumer"><span class="toc-text">Consumer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态-Context"><span class="toc-text">动态 Context</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#父子耦合"><span class="toc-text">父子耦合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作用于多个上下文"><span class="toc-text">作用于多个上下文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在生命周期方法中访问-Context"><span class="toc-text">在生命周期方法中访问 Context</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高阶组件中的-Context"><span class="toc-text">高阶组件中的 Context</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#转发-Refs"><span class="toc-text">转发 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#告诫"><span class="toc-text">告诫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遗留-API"><span class="toc-text">遗留 API</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fragments"><span class="toc-text">Fragments</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Portals"><span class="toc-text">Portals</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Error-Boundaries"><span class="toc-text">Error Boundaries</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-Components"><span class="toc-text">Web Components</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#高阶组件"><span class="toc-text">高阶组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#传递-Refs"><span class="toc-text">传递 Refs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Render-Props"><span class="toc-text">Render Props</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#术语-“render-prop”-是指一种在-React-组件之间使用一个值为函数的-prop-在-React-组件间共享代码的简单技术。"><span class="toc-text">术语 “render prop” 是指一种在 React 组件之间使用一个值为函数的 prop 在 React 组件间共享代码的简单技术。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在交叉关注点（Cross-Cutting-Concerns）使用-render-props"><span class="toc-text">在交叉关注点（Cross-Cutting Concerns）使用 render props</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-Props-而非-render"><span class="toc-text">使用 Props 而非 render</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#警告"><span class="toc-text">警告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在-React-PureComponent-中使用-render-props-要注意"><span class="toc-text">在 React.PureComponent 中使用 render props 要注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#与第三方库协同"><span class="toc-text">与第三方库协同</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可访问性"><span class="toc-text">可访问性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Code-Splitting"><span class="toc-text">Code-Splitting</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#严格模式"><span class="toc-text">严格模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#API参考"><span class="toc-text">API参考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#React"><span class="toc-text">React</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#React-Component"><span class="toc-text">React.Component</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ReactDOM"><span class="toc-text">ReactDOM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ReactDOMServer"><span class="toc-text">ReactDOMServer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DOM-元素"><span class="toc-text">DOM 元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#合成事件"><span class="toc-text">合成事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Test-Utilities"><span class="toc-text">Test Utilities</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浅层渲染"><span class="toc-text">浅层渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Test-Renderer"><span class="toc-text">Test Renderer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript-环境要求"><span class="toc-text">JavaScript 环境要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#术语表"><span class="toc-text">术语表</span></a></li></ol>
+    
+    <div class="picture-container">
+      
+    </div>
+    <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><ul>
 <li>可能引起组件更新:1、父组件重新render()或props改变; 2、this.setState()造成state改变；3、暴露ref被操作；</li>
 </ul>
 <h1 id="组件与Props"><a href="#组件与Props" class="headerlink" title="组件与Props"></a>组件与Props</h1><ul>
@@ -128,124 +116,66 @@
 <h1 id="非受控组件"><a href="#非受控组件" class="headerlink" title="非受控组件"></a>非受控组件</h1><h1 id="性能优化-1"><a href="#性能优化-1" class="headerlink" title="性能优化"></a>性能优化</h1><h1 id="不使用-ES6"><a href="#不使用-ES6" class="headerlink" title="不使用 ES6"></a>不使用 ES6</h1><h1 id="不使用-JSX"><a href="#不使用-JSX" class="headerlink" title="不使用 JSX"></a>不使用 JSX</h1><h1 id="Reconciliation"><a href="#Reconciliation" class="headerlink" title="Reconciliation"></a>Reconciliation</h1><hr>
 <h1 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h1><h2 id="Context-通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递-props-属性。"><a href="#Context-通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递-props-属性。" class="headerlink" title="Context 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递 props 属性。"></a>Context 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递 props 属性。</h2><h2 id="何时使用-Context"><a href="#何时使用-Context" class="headerlink" title="何时使用 Context"></a>何时使用 Context</h2><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><h2 id="React-createContext"><a href="#React-createContext" class="headerlink" title="React.createContext"></a>React.createContext</h2><h2 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h2><h2 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h2><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h2 id="动态-Context"><a href="#动态-Context" class="headerlink" title="动态 Context"></a>动态 Context</h2><h2 id="父子耦合"><a href="#父子耦合" class="headerlink" title="父子耦合"></a>父子耦合</h2><h2 id="作用于多个上下文"><a href="#作用于多个上下文" class="headerlink" title="作用于多个上下文"></a>作用于多个上下文</h2><h2 id="在生命周期方法中访问-Context"><a href="#在生命周期方法中访问-Context" class="headerlink" title="在生命周期方法中访问 Context"></a>在生命周期方法中访问 Context</h2><h2 id="高阶组件中的-Context"><a href="#高阶组件中的-Context" class="headerlink" title="高阶组件中的 Context"></a>高阶组件中的 Context</h2><h2 id="转发-Refs"><a href="#转发-Refs" class="headerlink" title="转发 Refs"></a>转发 Refs</h2><h2 id="告诫"><a href="#告诫" class="headerlink" title="告诫"></a>告诫</h2><h2 id="遗留-API"><a href="#遗留-API" class="headerlink" title="遗留 API"></a>遗留 API</h2><h1 id="Fragments"><a href="#Fragments" class="headerlink" title="Fragments"></a>Fragments</h1><h1 id="Portals"><a href="#Portals" class="headerlink" title="Portals"></a>Portals</h1><h1 id="Error-Boundaries"><a href="#Error-Boundaries" class="headerlink" title="Error Boundaries"></a>Error Boundaries</h1><h1 id="Web-Components"><a href="#Web-Components" class="headerlink" title="Web Components"></a>Web Components</h1><h1 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h1><h1 id="传递-Refs"><a href="#传递-Refs" class="headerlink" title="传递 Refs"></a>传递 Refs</h1><hr>
 <h1 id="Render-Props"><a href="#Render-Props" class="headerlink" title="Render Props"></a>Render Props</h1><h2 id="术语-“render-prop”-是指一种在-React-组件之间使用一个值为函数的-prop-在-React-组件间共享代码的简单技术。"><a href="#术语-“render-prop”-是指一种在-React-组件之间使用一个值为函数的-prop-在-React-组件间共享代码的简单技术。" class="headerlink" title="术语 “render prop” 是指一种在 React 组件之间使用一个值为函数的 prop 在 React 组件间共享代码的简单技术。"></a>术语 “render prop” 是指一种在 React 组件之间使用一个值为函数的 prop 在 React 组件间共享代码的简单技术。</h2><h2 id="在交叉关注点（Cross-Cutting-Concerns）使用-render-props"><a href="#在交叉关注点（Cross-Cutting-Concerns）使用-render-props" class="headerlink" title="在交叉关注点（Cross-Cutting Concerns）使用 render props"></a>在交叉关注点（Cross-Cutting Concerns）使用 render props</h2><h2 id="使用-Props-而非-render"><a href="#使用-Props-而非-render" class="headerlink" title="使用 Props 而非 render"></a>使用 Props 而非 render</h2><h2 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h2><h2 id="在-React-PureComponent-中使用-render-props-要注意"><a href="#在-React-PureComponent-中使用-render-props-要注意" class="headerlink" title="在 React.PureComponent 中使用 render props 要注意"></a>在 React.PureComponent 中使用 render props 要注意</h2><h1 id="与第三方库协同"><a href="#与第三方库协同" class="headerlink" title="与第三方库协同"></a>与第三方库协同</h1><h1 id="可访问性"><a href="#可访问性" class="headerlink" title="可访问性"></a>可访问性</h1><h1 id="Code-Splitting"><a href="#Code-Splitting" class="headerlink" title="Code-Splitting"></a>Code-Splitting</h1><h1 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h1><h1 id="API参考"><a href="#API参考" class="headerlink" title="API参考"></a>API参考</h1><h1 id="React"><a href="#React" class="headerlink" title="React"></a>React</h1><h1 id="React-Component"><a href="#React-Component" class="headerlink" title="React.Component"></a>React.Component</h1><h1 id="ReactDOM"><a href="#ReactDOM" class="headerlink" title="ReactDOM"></a>ReactDOM</h1><h1 id="ReactDOMServer"><a href="#ReactDOMServer" class="headerlink" title="ReactDOMServer"></a>ReactDOMServer</h1><h1 id="DOM-元素"><a href="#DOM-元素" class="headerlink" title="DOM 元素"></a>DOM 元素</h1><h1 id="合成事件"><a href="#合成事件" class="headerlink" title="合成事件"></a>合成事件</h1><h1 id="Test-Utilities"><a href="#Test-Utilities" class="headerlink" title="Test Utilities"></a>Test Utilities</h1><h1 id="浅层渲染"><a href="#浅层渲染" class="headerlink" title="浅层渲染"></a>浅层渲染</h1><h1 id="Test-Renderer"><a href="#Test-Renderer" class="headerlink" title="Test Renderer"></a>Test Renderer</h1><h1 id="JavaScript-环境要求"><a href="#JavaScript-环境要求" class="headerlink" title="JavaScript 环境要求"></a>JavaScript 环境要求</h1><h1 id="术语表"><a href="#术语表" class="headerlink" title="术语表"></a>术语表</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://inceptiongt.github.io/2018/11/12/react/" data-id="cjq7v0xyv00035pg5b5xsav92" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/12/20/缓存/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          缓存
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/10/10/待归档/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">待归档</div>
-    </a>
-  
-</nav>
 
+  </article>
   
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
-    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <div class="busuanzi center">
+    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
   </div>
 
 
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/12/28/ui/">ui</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/24/wepback/">wepback</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/20/缓存/">缓存</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/12/react/">react</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/10/待归档/">待归档</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 GT<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+
+
+
     </div>
   </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewbox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"/>
+        </svg>
+        </a>
+        © XXX 20xx-2017
+    </div>
+    <div class="secondrow">
+        <a href="https://github.com/gaoryrt/hexo-theme-pln">
+        Theme Pln
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+// disqus scripts
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
 
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
 
-<script src="/js/script.js"></script>
+</script>
 
-
-
-  </div>
 </body>
 </html>

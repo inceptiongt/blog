@@ -1,0 +1,98 @@
+figure {
+  overflow-x: auto; }
+
+td.gutter {
+  width: 50px; }
+
+code,
+pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; }
+
+pre {
+  font-size: 1.5rem;
+  line-height: 2em;
+  margin-bottom: 0;
+  padding: 15px;
+  border: 0;
+  border-radius: 0px;
+  tab-size: 4;
+  color: #555;
+  background: transparent;
+  background-size: auto 4em;
+  background-origin: content-box;
+  background-image: linear-gradient(#F1F3F5 50%, transparent 0); }
+  pre .comment {
+    color: #a2a2a2; }
+  pre .line {
+    height: 30px; }
+
+code {
+  word-wrap: break-word;
+  line-height: 2em;
+  font-size: .97em;
+  color: #555;
+  background: #F1F3F5; }
+
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #547ab2; }
+
+pre .keyword,
+pre .javascript .function {
+  color: #547ab2; }
+
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #3eacab; }
+
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #3eacab; }
+
+pre .title,
+pre .css .hexcolor {
+  color: #3eacab; }
+
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #3eacab; }
+
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #5a5050; }
+
+@media screen and (max-width: 782px) {
+  figure {
+    width: 110%;
+    margin-left: -5%; }
+  pre {
+    font-size: 1.2rem;
+    line-height: 18px;
+    padding: 10px;
+    background-size: auto 36px; }
+  code {
+    line-height: 1.9em; } }

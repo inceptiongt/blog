@@ -1,0 +1,31 @@
+.dropdown-toggle,
+.dropdown-menu,
+.open,
+a,
+a:hover,
+a:focus {
+  transition: .2s ease-in-out; }
+
+.dropdown-content {
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+
+.dropdown-content {
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  transform: translateY(1px);
+  opacity: 0; }
+
+.dropdown-content.open {
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1; }

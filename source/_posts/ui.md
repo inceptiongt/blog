@@ -21,3 +21,4 @@ font-class方式是unicode使用方式的一种变种，这种方式只是在原
 ## 参考
 [iconfont的实现原理及如何使用?](https://my.oschina.net/codingDog/blog/1618232)
 [使用SVG symbols建立图标系统](https://www.w3cplus.com/svg/how-to-create-an-icon-system-using-svg-symbols.html)
+[未来必热：SVG Sprite技术介绍](https://www.zhangxinxu.com/wordpress/2014/07/introduce-svg-sprite-technology/)
