@@ -1,5 +1,5 @@
 ---
-title: wepback
+title: Webpack
 date: 2018-12-24 09:32:01
 tags: JS
 categories: JS
