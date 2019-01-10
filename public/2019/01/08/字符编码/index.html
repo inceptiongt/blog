@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="">
+  
+  <title>字符编码</title>
+  <meta name="author" content="GT">
+  <meta name="description" content="参考字符编码的那些事Unicode 及编码方式概述HTML 转义字符  
+基础知识字符集与字符编码字符集
+
+Unicode、ASCII、GB2312、GBK、BIG5，每个字符集包含的字符种类和数量都不一样，每个字符有各自的码点作为唯一标识。
+
+字符编码
+
+将字符集码点空间中每个码点和字节序列进行一">
+  
+  
+  <meta property="og:title" content="字符编码">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="睡前总结">
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+</html>
+<body>
+  <a id="top"></a>
+  <div id="main">
+    <div class="behind">
+      <a href="/" class="back black-color">
+        <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+        </svg>
+      </a>
+      <div class="description">
+        &nbsp;GTT
+      </div>
+    </div>
+    <div class="main-ctnr">
+      
+
+  <article class="standard post">
+    <div class="title">
+      
+  
+    <h1 class="page-title center">
+        字符编码
+    </h1>
+  
+
+
+    </div>
+    <div class="meta center">
+      
+<time datetime="2019-01-08T03:32:20.000Z">
+<svg class="i-calendar" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"/>
+  </svg>
+  &nbsp;
+  2019-01-08
+</time>
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"/>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"/>
+    </svg>
+    &nbsp;
+    <a href="/categories/WEB/">WEB</a>
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"/>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"/>
+    </svg>
+    &nbsp;
+    <a href="/tags/WEB/">WEB</a>
+
+
+    </div>
+    <hr>
+    
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础知识"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符集与字符编码"><span class="toc-text">字符集与字符编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-Point-码点"><span class="toc-text">Code Point: 码点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-Space：码点空间-区间"><span class="toc-text">Code Space：码点空间/区间</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Unicode"><span class="toc-text">Unicode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UTF-8"><span class="toc-text">UTF-8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UTF-16"><span class="toc-text">UTF-16</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ASCII字符集及编码"><span class="toc-text">ASCII字符集及编码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Extended-ASCII"><span class="toc-text">Extended ASCII</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Base64"><span class="toc-text">Base64</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML的转义字符"><span class="toc-text">HTML的转义字符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符实体"><span class="toc-text">字符实体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何在JS对这些转义字符进行解析？"><span class="toc-text">如何在JS对这些转义字符进行解析？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS字符编码"><span class="toc-text">JS字符编码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#内部：JS引擎解析源码"><span class="toc-text">内部：JS引擎解析源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#外部：浏览器解析JS脚本"><span class="toc-text">外部：浏览器解析JS脚本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符编码与字体（微软雅黑等）的关系"><span class="toc-text">字符编码与字体（微软雅黑等）的关系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思考"><span class="toc-text">思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#unicode码点范围U-000000-U-10FFFF，3个字节就能全部表示，为什么需要发明UTF-8编码转换"><span class="toc-text">unicode码点范围U+000000~U+10FFFF，3个字节就能全部表示，为什么需要发明UTF-8编码转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要使用base64编码，有哪些情景需求？"><span class="toc-text">为什么要使用base64编码，有哪些情景需求？</span></a></li></ol></li></ol>
+    
+    <div class="picture-container">
+      
+    </div>
+    <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://segmentfault.com/a/1190000009560472" target="_blank" rel="noopener">字符编码的那些事</a><br><a href="https://www.ibm.com/developerworks/cn/java/unicode-programming-language/index.html" target="_blank" rel="noopener">Unicode 及编码方式概述</a><br><a href="http://www.w3chtml.com/html/character.html" target="_blank" rel="noopener">HTML 转义字符</a>  </p>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="字符集与字符编码"><a href="#字符集与字符编码" class="headerlink" title="字符集与字符编码"></a>字符集与字符编码</h2><p>字符集</p>
+<ul>
+<li>Unicode、ASCII、GB2312、GBK、BIG5，每个字符集包含的字符种类和数量都不一样，每个字符有各自的码点作为唯一标识。</li>
+</ul>
+<p>字符编码</p>
+<ul>
+<li>将字符集码点空间中每个码点和字节序列进行一一映射的算法</li>
+</ul>
+<p>Unicode实行“百家争鸣”政策，提供了UTF-8/UTF-16/UTF-32几种备选的字符编码方案，所以这时Unicode仅仅是字符集，UTF-X才是字符编码。</p>
+<h2 id="Code-Point-码点"><a href="#Code-Point-码点" class="headerlink" title="Code Point: 码点"></a>Code Point: 码点</h2><p>简单理解就是字符的数字表示。一个字符集一般可以用一张或多张由多个行和多个列所构成的二维表来表示。二维表中行与列交叉的点称之为码点，每个码点分配一个唯一的编号，称之为码点值或码点编号，除开某些特殊区域(比如代理区、专用区)的非字符码点和保留码点，每个码点唯一对应于一个字符。</p>
+<h2 id="Code-Space：码点空间-区间"><a href="#Code-Space：码点空间-区间" class="headerlink" title="Code Space：码点空间/区间"></a>Code Space：码点空间/区间</h2><p>字符集中所有码点的集合。</p>
+<h1 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h1><p>Unicode 编码字符集旨在收集全球所有的字符，为每个字符分配唯一的字符编号即代码点（Code Point），用<strong>U+紧跟着十六进制数</strong>表示。<br>所有字符按照使用上的频繁度划分为 17 个平面（编号为 0-16），即基本的多语言平面和增补平面。<br>基本的多语言平面（英文为 Basic Multilingual Plane，简称 BMP）又称平面 0，收集了使用最广泛的字符，代码点从 U+0000 到 U+FFFF，每个平面有 216=65536 个码点；<br>增补平面从平面 1~16，分为增补多语言平面（平面 1）、增补象形平面（平面 2）、保留平面（平 3~13）、增补专用平面等，每个增补平面也有 216=65536 个码点。<br>所以 17 个平总计有 17 × 65,536 = 1,114,112 个码点，码点范围U+000000 到 U+10FFFF。</p>
+<h2 id="UTF-8"><a href="#UTF-8" class="headerlink" title="UTF-8"></a>UTF-8</h2><ul>
+<li>UTF-8 是一种变长的编码方式，一般用 1~4 个字节序列来表示 Unicode 字符，也是目前应用最广泛的一种 Unicode 编码方式，但是它不是最早的 Unicode 编码方式，最早的 Unicode 编码方式是 UTF-16。</li>
+<li>编码算法，详见参考。</li>
+<li>当长度为1个字节时，编码与ASCII一致</li>
+<li>汉字(U+4E00 - U+9FA5)，UTF-8编码为1110xxxx 10xxxxxx 10xxxxxx，所以占3个Byte<h2 id="UTF-16"><a href="#UTF-16" class="headerlink" title="UTF-16"></a>UTF-16</h2>2个或4个字节存储一个字符<h1 id="ASCII字符集及编码"><a href="#ASCII字符集及编码" class="headerlink" title="ASCII字符集及编码"></a>ASCII字符集及编码</h1>ASCII是最古老原始的字符集和编码，主要是满足英语字符的需要，不包含中文等。<br>字符集：一共定义了128个字符，前32个字符是非打印控制字符(回车换行等)，其他的包含数字、大小字母等。<br>字符编码：每个字符用1Byte(8bit)来储存。虽然一个字节最多可以定义256种字符，但是ASCII只用了1个字节的后面7位，最前面统一都为0。  <h2 id="Extended-ASCII"><a href="#Extended-ASCII" class="headerlink" title="Extended ASCII"></a>Extended ASCII</h2>利用空闲的最高位，扩展出128个字符<h1 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h1>所谓Base64，就是说选出64个字符—-小写字母a-z、大写字母A-Z、数字0-9、符号”+”、”/“（再加上作为垫字的”=”，实际上是65个字符）—-作为一个基本字符集。然后，其他所有符号都转换成这个字符集中的字符。</li>
+<li>Base64将三个字节转化成四个字节，因此Base64编码后的文本，会比原文本大出三分之一左右。</li>
+<li>结果全是可见字符组成，一般需要=补位。<h1 id="HTML的转义字符"><a href="#HTML的转义字符" class="headerlink" title="HTML的转义字符"></a>HTML的转义字符</h1>诸如 “&lt;” 之类的符号在HTML中拥有特殊的含义，所以在文本中使用它们。为了在 HTML 中显示小于号 (&lt;)，我们需要使用字符实体<h2 id="字符实体"><a href="#字符实体" class="headerlink" title="字符实体"></a>字符实体</h2>字符实体有三部分：一个和号 (&amp;)；一个实体名称，或者 # 和一个实体编号；以及一个分号 (;)。要在 HTML 文档中显示小于号，我们需要这样写：&lt; 或者 &#60;<h2 id="如何在JS对这些转义字符进行解析？"><a href="#如何在JS对这些转义字符进行解析？" class="headerlink" title="如何在JS对这些转义字符进行解析？"></a>如何在JS对这些转义字符进行解析？</h2>String.fromCodePoint(codePoint)<h1 id="JS字符编码"><a href="#JS字符编码" class="headerlink" title="JS字符编码"></a>JS字符编码</h1><h2 id="内部：JS引擎解析源码"><a href="#内部：JS引擎解析源码" class="headerlink" title="内部：JS引擎解析源码"></a>内部：JS引擎解析源码</h2>引擎会把所有源码当做是一连串的UTF16码元，也就是内部是以UTF-16进行编码的<h2 id="外部：浏览器解析JS脚本"><a href="#外部：浏览器解析JS脚本" class="headerlink" title="外部：浏览器解析JS脚本"></a>外部：浏览器解析JS脚本</h2>依据文档说明<h1 id="字符编码与字体（微软雅黑等）的关系"><a href="#字符编码与字体（微软雅黑等）的关系" class="headerlink" title="字符编码与字体（微软雅黑等）的关系"></a>字符编码与字体（微软雅黑等）的关系</h1><h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><h2 id="unicode码点范围U-000000-U-10FFFF，3个字节就能全部表示，为什么需要发明UTF-8编码转换"><a href="#unicode码点范围U-000000-U-10FFFF，3个字节就能全部表示，为什么需要发明UTF-8编码转换" class="headerlink" title="unicode码点范围U+000000~U+10FFFF，3个字节就能全部表示，为什么需要发明UTF-8编码转换"></a>unicode码点范围U+000000~U+10FFFF，3个字节就能全部表示，为什么需要发明UTF-8编码转换</h2>全部3个字节表示浪费空间，大多数字符是英文字符，用UTF-8编码后只有1字节，少数才需要变长。<h2 id="为什么要使用base64编码，有哪些情景需求？"><a href="#为什么要使用base64编码，有哪些情景需求？" class="headerlink" title="为什么要使用base64编码，有哪些情景需求？"></a>为什么要使用base64编码，有哪些情景需求？</h2>有些情况下传输不可见字符不方便。比如一个纯文本协议，二进制中可能会出现被当做控制字符处理的部分。这样引起传输失败。<br>很多比较老的协议还是只支持纯文本的，比如SMTP协议。有时在一些特殊应用的场合，大多数消息是纯文本的，偶尔需要用这条纯文本通道传一张图片之类的情况发生的时候，就会用到base64。<br>http虽然也是纯文本协议，但是http有针对二进制数据做特殊的规定（mime），所以用http直接传输二进制数据是可行的。但是有些特殊情况，比如返回需要在json内部之类的。</li>
+</ul>
+
+
+  </article>
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <div class="busuanzi center">
+    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
+  </div>
+
+
+    
+
+
+
+
+    </div>
+  </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewbox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"/>
+        </svg>
+        </a>
+        © XXX 20xx-2017
+    </div>
+    <div class="secondrow">
+        <a href="https://github.com/gaoryrt/hexo-theme-pln">
+        Theme Pln
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
+
+// disqus scripts
+
+
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="">
+  
+  <title>Cookie</title>
+  <meta name="author" content="GT">
+  <meta name="description" content="TIPSRAS加密HTML转义、字符编码、base64\u0061\u006c\u0065\u0072\u0074(1)&amp;lt;script&amp;gt;window.location.href=’http://www.baidu.com&amp;#39;;&amp;lt;/script&amp;gt;
+不设置expires的c">
+  
+  
+  <meta property="og:title" content="Cookie">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="睡前总结">
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+</html>
+<body>
+  <a id="top"></a>
+  <div id="main">
+    <div class="behind">
+      <a href="/" class="back black-color">
+        <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+        </svg>
+      </a>
+      <div class="description">
+        &nbsp;GTT
+      </div>
+    </div>
+    <div class="main-ctnr">
+      
+
+  <article class="standard post">
+    <div class="title">
+      
+  
+    <h1 class="page-title center">
+        Cookie
+    </h1>
+  
+
+
+    </div>
+    <div class="meta center">
+      
+<time datetime="2019-01-02T01:59:37.000Z">
+<svg class="i-calendar" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"/>
+  </svg>
+  &nbsp;
+  2019-01-02
+</time>
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"/>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"/>
+    </svg>
+    &nbsp;
+    <a href="/categories/HTTP/">HTTP</a>
+
+
+
+
+    
+    &nbsp;
+    <svg class="i-tag" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"/>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"/>
+    </svg>
+    &nbsp;
+    <a href="/tags/HTTP/">HTTP</a>
+
+
+    </div>
+    <hr>
+    
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TIPS"><span class="toc-text">TIPS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RAS加密"><span class="toc-text">RAS加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML转义、字符编码、base64"><span class="toc-text">HTML转义、字符编码、base64</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"><span class="toc-text">不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#session"><span class="toc-text">session</span></a></li></ol></li></ol>
+    
+    <div class="picture-container">
+      
+    </div>
+    <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><h2 id="RAS加密"><a href="#RAS加密" class="headerlink" title="RAS加密"></a>RAS加密</h2><h2 id="HTML转义、字符编码、base64"><a href="#HTML转义、字符编码、base64" class="headerlink" title="HTML转义、字符编码、base64"></a>HTML转义、字符编码、base64</h2><p>\u0061\u006c\u0065\u0072\u0074(1)<br>&lt;script&gt;window.location.href=’<a href="http://www.baidu.com&#39;;&lt;/script" target="_blank" rel="noopener">http://www.baidu.com&#39;;&lt;/script</a>&gt;</p>
+<h2 id="不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"><a href="#不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”" class="headerlink" title="不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"></a>不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”</h2><h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2>
+
+  </article>
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <div class="busuanzi center">
+    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
+  </div>
+
+
+    
+
+
+
+
+    </div>
+  </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewbox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"/>
+        </svg>
+        </a>
+        © XXX 20xx-2017
+    </div>
+    <div class="secondrow">
+        <a href="https://github.com/gaoryrt/hexo-theme-pln">
+        Theme Pln
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
+
+// disqus scripts
+
+
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
+
+</body>
+</html>
