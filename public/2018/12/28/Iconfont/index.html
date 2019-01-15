@@ -92,7 +92,7 @@
       
     </div>
     <h1 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h1><h1 id="Iconfont"><a href="#Iconfont" class="headerlink" title="Iconfont"></a>Iconfont</h1><h2 id="unicode与font-class引用"><a href="#unicode与font-class引用" class="headerlink" title="unicode与font-class引用"></a>unicode与font-class引用</h2><p>使用的是使用系统字体渲染引擎，其实就是文字。<br>通过@font-face引入icon字体，再通过类名.iconfont设置元素的font-family属性值为icon字体。<br>font-class方式是unicode使用方式的一种变种，这种方式只是在原来的dom上增加一个伪元素。</p>
-<h2 id="symbol引用"><a href="#symbol引用" class="headerlink" title="symbol引用"></a>symbol引用</h2><p>使用SVG渲染技术<br>通过引入js，利用<symbol>生成svg图标集合，再通过<use>显示某一图标   </use></symbol></p>
+<h2 id="symbol引用"><a href="#symbol引用" class="headerlink" title="symbol引用"></a>symbol引用</h2><p>使用SVG渲染技术<br>通过引入js，利用<symbol>生成svg图标集合(SVG Sprite)，再通过<use>显示某一图标   </use></symbol></p>
 <h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>兼容性<br>单色/多色<br>通过font-size,color来调整样式  </p>
 <ul>
 <li>可能有些童鞋又疑惑了，svg的大小不是不支持font-size修改的吗？如何实现的呢？其实这里用了一个比较hack的方式，就是把图标元素的宽高都写为1em，而em的大小是相对于该元素的字体大小的，这样就实现了svg宽高跟着svg的字体大小一起变了。多色不支持color属性。</li>

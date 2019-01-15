@@ -12,7 +12,7 @@ categories: UI
 font-class方式是unicode使用方式的一种变种，这种方式只是在原来的dom上增加一个伪元素。
 ## symbol引用
 使用SVG渲染技术   
-通过引入js，利用<symbol>生成svg图标集合，再通过<use>显示某一图标   
+通过引入js，利用<symbol>生成svg图标集合(SVG Sprite)，再通过<use>显示某一图标   
 ## 比较
 兼容性  
 单色/多色  

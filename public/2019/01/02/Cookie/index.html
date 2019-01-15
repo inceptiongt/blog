@@ -9,8 +9,7 @@
   
   <title>Cookie</title>
   <meta name="author" content="GT">
-  <meta name="description" content="TIPSRAS加密HTML转义、字符编码、base64\u0061\u006c\u0065\u0072\u0074(1)&amp;lt;script&amp;gt;window.location.href=’http://www.baidu.com&amp;#39;;&amp;lt;/script&amp;gt;
-不设置expires的c">
+  <meta name="description" content="TIPSRAS加密不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关">
   
   
   <meta property="og:title" content="Cookie">
@@ -87,13 +86,18 @@
     </div>
     <hr>
     
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TIPS"><span class="toc-text">TIPS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RAS加密"><span class="toc-text">RAS加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML转义、字符编码、base64"><span class="toc-text">HTML转义、字符编码、base64</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"><span class="toc-text">不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#session"><span class="toc-text">session</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TIPS"><span class="toc-text">TIPS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RAS加密"><span class="toc-text">RAS加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"><span class="toc-text">不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#跨域请求中-cookie"><span class="toc-text">跨域请求中 cookie</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#session"><span class="toc-text">session</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     
     <div class="picture-container">
       
     </div>
-    <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><h2 id="RAS加密"><a href="#RAS加密" class="headerlink" title="RAS加密"></a>RAS加密</h2><h2 id="HTML转义、字符编码、base64"><a href="#HTML转义、字符编码、base64" class="headerlink" title="HTML转义、字符编码、base64"></a>HTML转义、字符编码、base64</h2><p>\u0061\u006c\u0065\u0072\u0074(1)<br>&lt;script&gt;window.location.href=’<a href="http://www.baidu.com&#39;;&lt;/script" target="_blank" rel="noopener">http://www.baidu.com&#39;;&lt;/script</a>&gt;</p>
-<h2 id="不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"><a href="#不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”" class="headerlink" title="不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"></a>不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”</h2><h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2>
+    <h1 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h1><h2 id="RAS加密"><a href="#RAS加密" class="headerlink" title="RAS加密"></a>RAS加密</h2><h2 id="不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"><a href="#不设置expires的cookie默认是session级别的-expires显示为1969-12-31T23-59-59-000Z-理论上是关闭浏览器tab页面就应当过期-但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”" class="headerlink" title="不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”"></a>不设置expires的cookie默认是session级别的,expires显示为1969-12-31T23:59:59.000Z,理论上是关闭浏览器tab页面就应当过期,但现在的浏览器很少这么做，chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。没想到Chrome居然认为这是一个连续会话。把设置改成”打开新标签页就好了”</h2><h1 id="跨域请求中-cookie"><a href="#跨域请求中-cookie" class="headerlink" title="跨域请求中 cookie"></a>跨域请求中 cookie</h1><p>默认情况下，在发生跨域时，cookie 作为一种 credential 信息是不会被传送到服务端的。必须要进行额外设置才可以。</p>
+<blockquote>
+<p>xhr.withCredentials与 CORS 什么关系<br>我们都知道，在发同域请求时，浏览器会将cookie自动加在request header中。但大家是否遇到过这样的场景：在发送跨域请求时，cookie并没有自动加在request header中。<br>造成这个问题的原因是：在CORS标准中做了规定，默认情况下，浏览器在发送跨域请求时，不能发送任何认证信息（credentials）如”cookies”和”HTTP authentication schemes”。除非xhr.withCredentials为true（xhr对象有一个属性叫withCredentials，默认值为false）。 </p>
+</blockquote>
+<p>所以根本原因是cookies也是一种认证信息，在跨域请求中，client端必须手动设置xhr.withCredentials=true，且server端也必须允许request能携带认证信息（即response header中包含Access-Control-Allow-Credentials:true），这样浏览器才会自动将cookie加在request header中。<br>另外，要特别注意一点，一旦跨域request能够携带认证信息，server端一定不能将Access-Control-Allow-Origin设置为*，而必须设置为请求页面的域名。  </p>
+<h1 id="session"><a href="#session" class="headerlink" title="session"></a>session</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://segmentfault.com/a/1190000004322487#articleHeader13" target="_blank" rel="noopener">你真的会使用XMLHttpRequest吗？</a>  </p>
+
 
   </article>
   

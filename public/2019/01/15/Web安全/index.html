@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="">
+  
+  <title>Web安全</title>
+  <meta name="author" content="GT">
+  <meta name="description" content="用户登录时的密码安全性登录后标记请求的合法性HTTP三大问题窃听风险（eavesdropping）：第三方可以获知通信内容。
+重放攻击篡改风险（tampering）：第三方可以修改通信内容。
+HTTP劫持–注入恶意js、广告弹窗冒充风险（pretending）：第三方可以冒充他人身份参与通信。关于W">
+  
+  
+  <meta property="og:title" content="Web安全">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="睡前总结">
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="睡前总结" type="application/atom+xml">
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+</html>
+<body>
+  <a id="top"></a>
+  <div id="main">
+    <div class="behind">
+      <a href="/" class="back black-color">
+        <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+        </svg>
+      </a>
+      <div class="description">
+        &nbsp;GTT
+      </div>
+    </div>
+    <div class="main-ctnr">
+      
+
+  <article class="standard post">
+    <div class="title">
+      
+  
+    <h1 class="page-title center">
+        Web安全
+    </h1>
+  
+
+
+    </div>
+    <div class="meta center">
+      
+<time datetime="2019-01-15T08:34:00.000Z">
+<svg class="i-calendar" viewbox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"/>
+  </svg>
+  &nbsp;
+  2019-01-15
+</time>
+
+
+
+
+
+
+
+    </div>
+    <hr>
+    
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用户登录时的密码安全性"><span class="toc-text">用户登录时的密码安全性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#登录后标记请求的合法性"><span class="toc-text">登录后标记请求的合法性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP三大问题"><span class="toc-text">HTTP三大问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#窃听风险（eavesdropping）：第三方可以获知通信内容。"><span class="toc-text">窃听风险（eavesdropping）：第三方可以获知通信内容。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#篡改风险（tampering）：第三方可以修改通信内容。"><span class="toc-text">篡改风险（tampering）：第三方可以修改通信内容。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冒充风险（pretending）：第三方可以冒充他人身份参与通信。"><span class="toc-text">冒充风险（pretending）：第三方可以冒充他人身份参与通信。</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Web前端密码加密是否有意义的总结"><span class="toc-text">关于Web前端密码加密是否有意义的总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTPS"><span class="toc-text">HTTPS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    
+    <div class="picture-container">
+      
+    </div>
+    <h1 id="用户登录时的密码安全性"><a href="#用户登录时的密码安全性" class="headerlink" title="用户登录时的密码安全性"></a>用户登录时的密码安全性</h1><h1 id="登录后标记请求的合法性"><a href="#登录后标记请求的合法性" class="headerlink" title="登录后标记请求的合法性"></a>登录后标记请求的合法性</h1><h1 id="HTTP三大问题"><a href="#HTTP三大问题" class="headerlink" title="HTTP三大问题"></a>HTTP三大问题</h1><h2 id="窃听风险（eavesdropping）：第三方可以获知通信内容。"><a href="#窃听风险（eavesdropping）：第三方可以获知通信内容。" class="headerlink" title="窃听风险（eavesdropping）：第三方可以获知通信内容。"></a>窃听风险（eavesdropping）：第三方可以获知通信内容。</h2><ul>
+<li>重放攻击<h2 id="篡改风险（tampering）：第三方可以修改通信内容。"><a href="#篡改风险（tampering）：第三方可以修改通信内容。" class="headerlink" title="篡改风险（tampering）：第三方可以修改通信内容。"></a>篡改风险（tampering）：第三方可以修改通信内容。</h2></li>
+<li>HTTP劫持–注入恶意js、广告弹窗<h2 id="冒充风险（pretending）：第三方可以冒充他人身份参与通信。"><a href="#冒充风险（pretending）：第三方可以冒充他人身份参与通信。" class="headerlink" title="冒充风险（pretending）：第三方可以冒充他人身份参与通信。"></a>冒充风险（pretending）：第三方可以冒充他人身份参与通信。</h2><h1 id="关于Web前端密码加密是否有意义的总结"><a href="#关于Web前端密码加密是否有意义的总结" class="headerlink" title="关于Web前端密码加密是否有意义的总结"></a>关于Web前端密码加密是否有意义的总结</h1></li>
+<li>前端加密对本站的安全性没有任何提升</li>
+<li>提供一種隱私保護服務，如果能够保护密码明文，至少降低了一点该用户其他网站（即使是 HTTPS 的网站）被一锅端的风险。<h1 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><a href="https://zhuanlan.zhihu.com/p/36603247" target="_blank" rel="noopener">如何加密传输和存储用户密码</a><br><a href="https://www.zhihu.com/question/25539382" target="_blank" rel="noopener">Web前端密码加密是否有意义？</a></li>
+</ul>
+
+
+  </article>
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <div class="busuanzi center">
+    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
+  </div>
+
+
+    
+
+
+
+
+    </div>
+  </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewbox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"/>
+        </svg>
+        </a>
+        © XXX 20xx-2017
+    </div>
+    <div class="secondrow">
+        <a href="https://github.com/gaoryrt/hexo-theme-pln">
+        Theme Pln
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
+
+// disqus scripts
+
+
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
+
+</body>
+</html>
